@@ -56,15 +56,39 @@
 		E5F129FD2C8701B000663916 /* TicTacToe */ = {
 			isa = PBXGroup;
 			children = (
+				E5F12A142C870BC600663916 /* Model */,
+				E5F12A132C870BAE00663916 /* View */,
+				E5F12A122C870B9D00663916 /* Controller */,
 				E5F129FE2C8701B000663916 /* AppDelegate.swift */,
 				E5F12A002C8701B000663916 /* SceneDelegate.swift */,
-				E5F12A022C8701B000663916 /* ViewController.swift */,
-				E5F12A042C8701B000663916 /* Main.storyboard */,
 				E5F12A072C8701B200663916 /* Assets.xcassets */,
 				E5F12A092C8701B200663916 /* LaunchScreen.storyboard */,
 				E5F12A0C2C8701B200663916 /* Info.plist */,
 			);
 			path = TicTacToe;
+			sourceTree = "<group>";
+		};
+		E5F12A122C870B9D00663916 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				E5F12A022C8701B000663916 /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		E5F12A132C870BAE00663916 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E5F12A042C8701B000663916 /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E5F12A142C870BC600663916 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
