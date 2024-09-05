@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Game View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TicTacToe" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="GameViewController" customModule="TicTacToe" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -22,20 +22,20 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="amm-FQ-6nv">
                                         <rect key="frame" x="0.0" y="0.0" width="325" height="105"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="square" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="ctz-rc-Cdy">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="square" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="ctz-rc-Cdy" userLabel="A1">
                                                 <rect key="frame" x="0.0" y="1.6666666666666643" width="105" height="102"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="105" id="1rV-vK-793"/>
                                                     <constraint firstAttribute="height" constant="105" id="Fq9-W9-3ds"/>
                                                 </constraints>
                                             </imageView>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="square" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="NFQ-Ac-TCT">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="square" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="NFQ-Ac-TCT" userLabel="A2">
                                                 <rect key="frame" x="110" y="1.6666666666666643" width="105" height="102"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="105" id="r4D-YL-Tud"/>
                                                 </constraints>
                                             </imageView>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="square" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="vZ2-tS-yU8">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="square" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="vZ2-tS-yU8" userLabel="A3">
                                                 <rect key="frame" x="220" y="1.6666666666666643" width="105" height="102"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="105" id="jWy-kl-4S6"/>
@@ -47,20 +47,20 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="dxl-td-F2y">
                                         <rect key="frame" x="0.0" y="105" width="325" height="105"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="square" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="7qo-Sx-fCu">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="square" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="7qo-Sx-fCu" userLabel="B1">
                                                 <rect key="frame" x="0.0" y="1.6666666666666643" width="105" height="102"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="105" id="Mds-rO-BHp"/>
                                                     <constraint firstAttribute="width" constant="105" id="R5o-VZ-mKu"/>
                                                 </constraints>
                                             </imageView>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="square" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="hmJ-xs-3Lp">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="square" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="hmJ-xs-3Lp" userLabel="B2">
                                                 <rect key="frame" x="110" y="1.6666666666666643" width="105" height="102"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="105" id="DbF-Eh-8Kj"/>
                                                 </constraints>
                                             </imageView>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="square" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="c01-L6-ESG">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="square" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="c01-L6-ESG" userLabel="B3">
                                                 <rect key="frame" x="220" y="1.6666666666666643" width="105" height="102"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="105" id="XMW-tL-hoC"/>
@@ -72,20 +72,20 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="SwD-hG-5gh">
                                         <rect key="frame" x="0.0" y="210" width="325" height="105"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="square" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="0ov-OS-dyH">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="square" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="0ov-OS-dyH" userLabel="C1">
                                                 <rect key="frame" x="0.0" y="1.6666666666666643" width="105" height="102"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="105" id="b9J-m0-aHv"/>
                                                     <constraint firstAttribute="width" constant="105" id="c6X-vt-jjO"/>
                                                 </constraints>
                                             </imageView>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="square" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="VxQ-Y6-Hrn">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="square" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="VxQ-Y6-Hrn" userLabel="C2">
                                                 <rect key="frame" x="110" y="1.6666666666666643" width="105" height="102"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="105" id="p4i-oF-Q25"/>
                                                 </constraints>
                                             </imageView>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="square" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="LZB-ED-9Ue">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="square" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="LZB-ED-9Ue" userLabel="C3">
                                                 <rect key="frame" x="220" y="1.6666666666666643" width="105" height="102"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="105" id="anI-Vb-gHH"/>
@@ -97,21 +97,28 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="85" translatesAutoresizingMaskIntoConstraints="NO" id="ZHf-zi-XZM" userLabel="PlayerStack">
-                                <rect key="frame" x="70" y="159" width="255" height="85"/>
+                                <rect key="frame" x="70" y="159" width="253" height="85"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="xmark" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="5aU-wW-UJr">
                                         <rect key="frame" x="0.0" y="2.6666666666666643" width="85" height="80"/>
+                                        <gestureRecognizers/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="85" id="2VE-GW-6fr"/>
                                             <constraint firstAttribute="height" constant="85" id="gbV-mN-OyP"/>
                                         </constraints>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="CTB-eT-Pfu" appends="YES" id="x1B-cN-ovl"/>
+                                        </connections>
                                     </imageView>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="vzg-MC-VoG">
-                                        <rect key="frame" x="170" y="1" width="85" height="83.666666666666671"/>
+                                        <rect key="frame" x="170" y="1" width="83" height="83.666666666666671"/>
+                                        <gestureRecognizers/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="85" id="tbq-fw-95z"/>
                                             <constraint firstAttribute="height" constant="85" id="weL-10-xJi"/>
                                         </constraints>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="JgV-eb-JoH" appends="YES" id="dJS-MG-F2U"/>
+                                        </connections>
                                     </imageView>
                                 </subviews>
                             </stackView>
@@ -126,8 +133,32 @@
                             <constraint firstItem="zCt-XJ-CCS" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="sVT-Az-hZ9"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="oPlayer" destination="vzg-MC-VoG" id="qBP-AH-Exy"/>
+                        <outlet property="xPlayer" destination="5aU-wW-UJr" id="3UX-9W-FAC"/>
+                        <outletCollection property="gameBoardSquares" destination="ctz-rc-Cdy" collectionClass="NSMutableArray" id="pwd-j0-cuL"/>
+                        <outletCollection property="boardSquares" destination="ctz-rc-Cdy" collectionClass="NSMutableArray" id="h9h-MC-Q7r"/>
+                        <outletCollection property="boardSquares" destination="NFQ-Ac-TCT" collectionClass="NSMutableArray" id="lyX-gZ-wIY"/>
+                        <outletCollection property="boardSquares" destination="vZ2-tS-yU8" collectionClass="NSMutableArray" id="wm4-ic-8Kd"/>
+                        <outletCollection property="boardSquares" destination="7qo-Sx-fCu" collectionClass="NSMutableArray" id="dcx-hH-W2S"/>
+                        <outletCollection property="boardSquares" destination="hmJ-xs-3Lp" collectionClass="NSMutableArray" id="gLh-6T-KwB"/>
+                        <outletCollection property="boardSquares" destination="c01-L6-ESG" collectionClass="NSMutableArray" id="e1m-EP-r2Y"/>
+                        <outletCollection property="boardSquares" destination="0ov-OS-dyH" collectionClass="NSMutableArray" id="n9g-S1-aiI"/>
+                        <outletCollection property="boardSquares" destination="VxQ-Y6-Hrn" collectionClass="NSMutableArray" id="Vxp-UR-lvZ"/>
+                        <outletCollection property="boardSquares" destination="LZB-ED-9Ue" collectionClass="NSMutableArray" id="R0s-gS-SFC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="CTB-eT-Pfu">
+                    <connections>
+                        <action selector="xPlayerGesture:" destination="BYZ-38-t0r" id="8Ej-A8-k6J"/>
+                    </connections>
+                </panGestureRecognizer>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="JgV-eb-JoH">
+                    <connections>
+                        <action selector="oPlayerGesture:" destination="BYZ-38-t0r" id="9Jo-m7-12m"/>
+                    </connections>
+                </panGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="78.625954198473281" y="3.5211267605633805"/>
         </scene>
