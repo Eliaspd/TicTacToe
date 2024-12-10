@@ -158,6 +158,16 @@
                                         </connections>
                                     </imageView>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="5aU-wW-UJr" secondAttribute="bottom" id="4O8-ph-wFl"/>
+                                    <constraint firstItem="vzg-MC-VoG" firstAttribute="leading" secondItem="5aU-wW-UJr" secondAttribute="trailing" constant="85" id="8Ma-Nk-kp6"/>
+                                    <constraint firstItem="5aU-wW-UJr" firstAttribute="leading" secondItem="ZHf-zi-XZM" secondAttribute="leading" id="8w8-4w-LPy"/>
+                                    <constraint firstItem="vzg-MC-VoG" firstAttribute="top" secondItem="ZHf-zi-XZM" secondAttribute="top" id="GJW-oT-dcB"/>
+                                    <constraint firstAttribute="bottom" secondItem="vzg-MC-VoG" secondAttribute="bottom" id="HIf-lM-rff"/>
+                                    <constraint firstAttribute="trailing" secondItem="vzg-MC-VoG" secondAttribute="trailing" id="HmI-K4-sC4"/>
+                                    <constraint firstItem="5aU-wW-UJr" firstAttribute="top" secondItem="ZHf-zi-XZM" secondAttribute="top" id="Hz6-bf-8sV"/>
+                                    <constraint firstItem="vzg-MC-VoG" firstAttribute="leading" secondItem="5aU-wW-UJr" secondAttribute="trailing" constant="85" id="Ujr-7X-Hse"/>
+                                </constraints>
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>

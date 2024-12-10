@@ -40,7 +40,7 @@ class TicTacToe {
         guard row >= 0 && row < 3 && col >= 0 && col < 3 else { return false }
         guard board[row][col] == .empty else { return false }
         
-        // Update the board with the current player's move
+        
         board[row][col] = currentPlayer.type == .x ? .x : .o
         
         if checkForWinner() {
@@ -66,7 +66,7 @@ class TicTacToe {
     }
     
     private func checkForWinner() -> Bool {
-        // Check rows and columns
+
         for i in 0..<3 {
             if board[i][0] != .empty && board[i][0] == board[i][1] && board[i][1] == board[i][2] {
                 return true
@@ -76,7 +76,7 @@ class TicTacToe {
             }
         }
         
-        // Check diagonals
+
         if board[0][0] != .empty && board[0][0] == board[1][1] && board[1][1] == board[2][2] {
             return true
         }
