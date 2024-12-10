@@ -20,7 +20,6 @@ class TicTacToe {
         case win(Player)
     }
 
-    
     private var board: [[CellState]]
     private(set) var currentPlayer: Player
     private let playerX: Player
@@ -39,7 +38,6 @@ class TicTacToe {
         guard gameState == .ongoing else { return false }
         guard row >= 0 && row < 3 && col >= 0 && col < 3 else { return false }
         guard board[row][col] == .empty else { return false }
-        
         
         board[row][col] = currentPlayer.type == .x ? .x : .o
         
@@ -66,7 +64,6 @@ class TicTacToe {
     }
     
     private func checkForWinner() -> Bool {
-
         for i in 0..<3 {
             if board[i][0] != .empty && board[i][0] == board[i][1] && board[i][1] == board[i][2] {
                 return true
@@ -75,7 +72,6 @@ class TicTacToe {
                 return true
             }
         }
-        
 
         if board[0][0] != .empty && board[0][0] == board[1][1] && board[1][1] == board[2][2] {
             return true
@@ -83,7 +79,7 @@ class TicTacToe {
         if board[0][2] != .empty && board[0][2] == board[1][1] && board[1][1] == board[2][0] {
             return true
         }
-        
+
         return false
     }
     
