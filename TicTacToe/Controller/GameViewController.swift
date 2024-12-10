@@ -12,27 +12,18 @@ class GameViewController: UIViewController {
     @IBOutlet weak var xPlayer: UIImageView!
     @IBOutlet weak var oPlayer: UIImageView!
     
-    var playerOne: Player?
-    var playerTwo: Player?
-    
     var initialXposition: CGPoint = CGPoint.zero
     var initialOposition: CGPoint = CGPoint.zero
-    
-    var squareFrame: CGRect = .zero
-    var xFrame: CGRect = .zero
-    var oFrame: CGRect = .zero
-    
     var droppedInSquare = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
         initialXposition = xPlayer.center
         initialOposition = oPlayer.center
-
     }
 
     @IBAction func resetGame(_ sender: UIButton) {
-        let initialSquareImage = UIImage(named: "B1")
+        let initialSquareImage = UIImage(systemName: "B1")
         for square in boardSquares {
             square.image = initialSquareImage
         }
@@ -40,68 +31,44 @@ class GameViewController: UIViewController {
             self.xPlayer.center = self.initialXposition
             self.oPlayer.center = self.initialOposition
         }
+        droppedInSquare = false
     }
-
     
     @IBAction func xPlayerGesture(_ sender: UIPanGestureRecognizer) {
-        
-        let translation = sender.translation(in: self.view)
-        
-        xPlayer.center = CGPoint(x: translation.x + xPlayer.center.x, y: translation.y + xPlayer.center.y)
-        sender.setTranslation(.zero, in: self.view)
-        
-        if sender.state == .ended {
-            
-            for square in boardSquares {
-                squareFrame = square.superview?.convert(square.frame, to: self.view) ?? square.frame
-                xFrame = xPlayer.superview?.convert(xPlayer.frame, to: self.view) ?? xPlayer.frame
-                
-                if squareFrame.contains(xFrame) {
-                    
-                    xPlayer.center = square.center
-                    square.image = xPlayer.image
-                    square.tintColor = xPlayer.tintColor
-                    self.xPlayer.center = self.initialXposition
-                    break
-                }
-            }
-            
-            if !droppedInSquare {
-                UIView.animate(withDuration: 0.3) {
-                    self.xPlayer.center = self.initialXposition
-                }
-            }
-        }
+        handlePlayerGesture(sender, player: xPlayer, initialPosition: initialXposition)
     }
 
     @IBAction func oPlayerGesture(_ sender: UIPanGestureRecognizer) {
+        handlePlayerGesture(sender, player: oPlayer, initialPosition: initialOposition)
+    }
+    
+    private func handlePlayerGesture(_ sender: UIPanGestureRecognizer, player: UIImageView, initialPosition: CGPoint) {
         let translation = sender.translation(in: self.view)
-        oPlayer.center = CGPoint(x: translation.x + oPlayer.center.x, y: translation.y + oPlayer.center.y)
-        sender.setTranslation(CGPoint.zero, in: self.view)
+        player.center = CGPoint(x: translation.x + player.center.x, y: translation.y + player.center.y)
+        sender.setTranslation(.zero, in: self.view)
         
         if sender.state == .ended {
-            
+            droppedInSquare = false
             
             for square in boardSquares {
-                squareFrame = square.superview?.convert(square.frame, to: self.view) ?? square.frame
-                oFrame = oPlayer.superview?.convert(oPlayer.frame, to: self.view) ?? oPlayer.frame
+                let squareFrame = square.superview?.convert(square.frame, to: self.view) ?? square.frame
+                let playerFrame = player.superview?.convert(player.frame, to: self.view) ?? player.frame
                 
-                if squareFrame.contains(oFrame) {
-                    oPlayer.center = square.center
-                    square.image = self.oPlayer.image
-                    square.tintColor = oPlayer.tintColor
-                    self.oPlayer.center = self.initialOposition
+                if squareFrame.contains(playerFrame) {
+                    player.center = square.center
+                    square.image = player.image
+                    square.tintColor = player.tintColor
+                    droppedInSquare = true
+                    player.center = initialPosition
                     break
                 }
             }
             
             if !droppedInSquare {
                 UIView.animate(withDuration: 0.3) {
-                    self.oPlayer.center = self.initialOposition
+                    player.center = initialPosition
                 }
             }
         }
     }
 }
-
-
