@@ -145,7 +145,7 @@
                                         <color key="tintColor" red="0.91388183832168579" green="0.49832653999328613" blue="0.85786986351013184" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <gestureRecognizers/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="70" id="3lL-Bv-URt"/>
+                                            <constraint firstAttribute="height" constant="70" id="WEg-Nx-FU0"/>
                                             <constraint firstAttribute="width" constant="70" id="Xlt-jI-SAF"/>
                                         </constraints>
                                         <connections>
@@ -164,6 +164,12 @@
                                     <constraint firstItem="vzg-MC-VoG" firstAttribute="leading" secondItem="5aU-wW-UJr" secondAttribute="trailing" constant="85" id="Ujr-7X-Hse"/>
                                 </constraints>
                             </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J4Y-VM-imC">
+                                <rect key="frame" x="176" y="101" width="41.333333333333343" height="20.333333333333329"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -173,9 +179,12 @@
                             <constraint firstItem="zCt-XJ-CCS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="34" id="5m5-k9-sL9"/>
                             <constraint firstItem="P07-zy-pok" firstAttribute="top" secondItem="zCt-XJ-CCS" secondAttribute="bottom" constant="43.329999999999998" id="CXQ-CE-Aty"/>
                             <constraint firstItem="ZHf-zi-XZM" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="84" id="Cuj-qP-cUI"/>
+                            <constraint firstItem="J4Y-VM-imC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="176" id="FIE-49-zde"/>
+                            <constraint firstItem="J4Y-VM-imC" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="42" id="FJM-Qg-afi"/>
                             <constraint firstItem="P07-zy-pok" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="147" id="Ove-Ob-qpz"/>
                             <constraint firstItem="zCt-XJ-CCS" firstAttribute="top" secondItem="ZHf-zi-XZM" secondAttribute="bottom" constant="39.670000000000002" id="fkW-HI-odG"/>
                             <constraint firstItem="ZHf-zi-XZM" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="fmH-5l-Vy2"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="J4Y-VM-imC" secondAttribute="trailing" constant="175.66999999999999" id="mKJ-w1-gJL"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="zCt-XJ-CCS" secondAttribute="trailing" constant="34" id="nfb-y4-TO9"/>
                             <constraint firstItem="zCt-XJ-CCS" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="s9v-L8-o07"/>
                             <constraint firstItem="zCt-XJ-CCS" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="sVT-Az-hZ9"/>
@@ -184,6 +193,7 @@
                     </view>
                     <connections>
                         <outlet property="oPlayer" destination="vzg-MC-VoG" id="qBP-AH-Exy"/>
+                        <outlet property="statusLabel" destination="J4Y-VM-imC" id="JV6-Mt-CUi"/>
                         <outlet property="xPlayer" destination="5aU-wW-UJr" id="3UX-9W-FAC"/>
                         <outletCollection property="boardSquares" destination="ctz-rc-Cdy" collectionClass="NSMutableArray" id="h9h-MC-Q7r"/>
                         <outletCollection property="boardSquares" destination="NFQ-Ac-TCT" collectionClass="NSMutableArray" id="lyX-gZ-wIY"/>
